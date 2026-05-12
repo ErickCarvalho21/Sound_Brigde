@@ -1,0 +1,45 @@
+@media(max-width:768px){
+  #sidebar{display:none}
+  #mobile-nav{display:block}
+  #player{
+    padding:0 16px calc(var(--player) + 2px);
+    height:auto;
+    min-height:var(--player);
+    flex-wrap:wrap;
+  }
+  #page{padding:0 16px 160px}
+  .hero{padding:44px 0 28px}
+  .hero h1{font-size:clamp(28px,8vw,40px)}
+  .album-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:18px;
+  }
+  .album-art{
+    width:100%;
+    max-width:300px;
+    aspect-ratio:1;
+    height:auto;
+  }
+  .tracks-head,.album-track-item{
+    grid-template-columns:28px 1fr 60px 44px;
+  }
+  .tracks-head .th-price,.album-track-item .tr-price{display:none}
+  .player-right{display:none}
+  .player-track{max-width:none}
+  .player-controls{
+    flex:none;
+    width:100%;
+    max-width:none;
+  }
+  .ctrl-btn:not(.play-adjacent){display:none}
+}
+
+@media(max-width:520px){
+  .cards-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-search{height:50px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+}
